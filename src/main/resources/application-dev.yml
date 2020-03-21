@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: asher
+    password: root
+    url: jdbc:mysql://172.16.17.130:3306/myDB?characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.asher.bean
+
+#显示sql
+logging:
+  level:
+    com:
+      asher:
+        mapper: debug
